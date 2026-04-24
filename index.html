@@ -1,189 +1,343 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Licioys</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Licioys — Gorengan Crispy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="home-background">
-        <header class="header">
-            <h1 class="iyal" id="iyal">The Licioys</h1>
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav class="navbar">
-                <button><a href="#">HOME</a></button>
-                <button><a href="#about">TENTANG SAYA</a></button>
-                <button><a href="#menu">PRODUK</a></button>
-                <button><a href="#contact">KONTAK</a></button>
-            </nav>
-        </header>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">The Licioys</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
+  </div>
 
-    <section id="#">
-        <div class="home-content">
-            <div class="text-container">
-                <h1 class="yal">THE LICIOYS</h1>
-                <p class="text1">
-                    Selamat datang! Rasakan cita rasa renyah dan lezat dari 
-                    camilan goreng saya, yang dibuat untuk memuaskan keinginan Anda.
-                </p>
-                <a href="#about" class="btn view-details">Read More</a>
-            </div>
-        </div>
-    </section>
+  <!-- HEADER -->
+  <header id="header">
+    <a href="#" class="logo">The Licioys</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navbar" id="navbar">
+      <div class="nav-close">
+        <span class="nav-close-label">Menu</span>
+        <button class="nav-close-btn" onclick="closeMenu()" aria-label="Tutup menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <a href="#" class="nav-link" onclick="closeMenu()">Home</a>
+      <a href="#about" class="nav-link" onclick="closeMenu()">Tentang</a>
+      <a href="#menu" class="nav-link" onclick="closeMenu()">Produk</a>
+      <a href="#contact" class="nav-link" onclick="closeMenu()">Kontak</a>
+    </nav>
+  </header>
 
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-text">
-                <h1 class="iyau">The Licioys</h1>
-                <p>Halo, saya Papa Iyal, pemilik <strong>The Licioys</strong>.</p>
-                <p>
-                    Ini adalah toko kecil yang menyajikan kelezatan gorengan dan
-                    hidangan sarapan yang crispy dan menggugah selera. Berawal dari
-                    kecintaan saya pada gorengan crispy yang menjadi favorit keluarga,
-                    saya bertekad menghadirkan cita rasa yang istimewa untuk Anda.
-                </p>
-                <p>
-                    Terima kasih telah mampir ke <strong>The Licioys</strong>. Semoga
-                    setiap gigitan membawa kebahagiaan!
-                </p>
-            </div>
-            <div class="about-image">
-                <img src="https://i.ibb.co.com/kSkwcXS/Whats-App-Image-2024-11-20-at-19-54-21-16db0417.jpg"
-                    alt="Papa Iyal" />
-            </div>
-        </div>
-    </section>
-
-    <section id="menu" class="menu-content">
-        <h1 class="iyau">GORENGAN PAYAL</h1>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="image-placeholder">
-                    <img src="https://i.pinimg.com/736x/2c/9a/23/2c9a23d61c68e29a74f612ffe9d2597c.jpg" alt="Bakwan"
-                        class="image-placeholder" />
-                </div>
-                <h2>Bakwan</h2>
-                <p>Rp 1.000</p>
-                <div class="button-container">
-                    <button class="pesanButton">
-                        <i class="fas fa-shopping-cart"></i> Order ࣪𓏲ּ </button>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="image-placeholder">
-                    <img src="https://i.pinimg.com/736x/82/08/99/820899c778d6758765271cdcf2ad59fd.jpg" alt="Tempe"
-                        class="image-placeholder" />
-                </div>
-                <h2>Tempe</h2>
-                <p>Rp 1.000</p>
-                <div class="button-container"> <button class="pesanButton"> <i class="fas fa-shopping-cart"></i> Order
-                        ࣪𓏲ּ </button> </div>
-            </div>
-            <div class="menu-item">
-                <div class="image-placeholder"> <img
-                        src="https://i.pinimg.com/736x/98/64/93/986493a964fc2b2c14f08ae502812c84.jpg"
-                        alt="Pisang Goreng" class="image-placeholder" /> </div>
-                <h2>Pisang Goreng</h2>
-                <p>Rp 1.000</p>
-                <div class="button-container"> <button class="pesanButton"> <i class="fas fa-shopping-cart"></i> Order
-                        ૮₍˶ᵔ ᵕ ᵔ˶ ₎ა </button> </div>
-            </div>
-            <div class="menu-item">
-                <div class="image-placeholder"> <img
-                        src="https://i.pinimg.com/736x/29/5b/5d/295b5d11fc1ee301353bda4ffb0562a2.jpg"
-                        alt="Pisang Coklat" class="image-placeholder" /> </div>
-                <h2>Pisang Coklat</h2>
-                <p>Rp 1.000</p>
-                <div class="button-container"> <button class="pesanButton"> <i class="fas fa-shopping-cart"></i> Order
-                        ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა </button> </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="containerr">
-            <h1 class="iy">Contact Me</h1>
-            <p>Jika Anda ingin memesan, silakan hubungi saya melalui media sosial berikut:</p>
-            <div class="social-icons">
-                <a class="tiktok-button" href="https://www.tiktok.com/@siy00n_">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a class="whatsapp-button" href="https://wa.me/6281277210361?">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a class="instagram-button" href="https://www.instagram.com/@yal0000_/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="facebook-button" href="https://www.facebook.com/Firyalrah">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="footer-background">
-        <footer>
-            <div class="row">
-                <div class="col">
-                    <h2>The Licioys</h2>
-                    <p>Bogor, Indonesia</p>
-                    <p>
-                        <a href="https://wa.me/qr/76WJORPVV2IDM1">+62 812-7721-0361</a>
-                    </p>
-                </div>
-                <ul class="col">
-                    <h2>Hubungi</h2>
-                    <p>Kec. Dramaga, Kab. Bogor</p>
-                    <div class="FooterSosIcons">
-                        <a
-                            href="https://www.instagram.com/yal0000_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@siy00n_?is_from_webapp=1&sender_device=pc"><i
-                                class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://web.facebook.com/profile.php?id=100076167772870"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://wa.me/qr/2ZV4S2Q2WQGWE1"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </ul>
-                <div class="col">
-                    <h2>Links</h2>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#menu">MENU</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <div class="footerBottom"></div>
-                    <p>
-                        Copyright &copy;2024; Designed by
-                        <br />
-                        Team 5,
-                        <a href="https://smkn1ciomas.sch.id/">SMKN 1 Ciomas</a></span>
-                    </p>
-                </div>
-            </div>
-        </footer>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.pexels.com/photos/28671538/pexels-photo-28671538/free-photo-of-tampilan-kios-makanan-pasar-malam-yang-semarak.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="background" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-noise"></div>
     </div>
-    <div id="popupBox" class="popup-hidden">
-        <div class="popup-content">
-            <h2>Ingin membeli makanan saya? Silahkan hubungi nomor dibawah ini:</h2>
-            <p> <a href="https://wa.me/qr/2ZV4S2Q2WQGWE1" target="_blank">+62 812-7721-0361</a>
-            </p>
-            <p>Dramaga, Bogor</p>
-            <button id="batalButton">OKAY</button>
-        </div>
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">Gorengan Crispy — Bogor</div>
+      <h1 class="hero-title reveal-up" style="animation-delay:.15s">
+        <span class="hero-title-line">THE</span>
+        <span class="hero-title-line italic">Licioys</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="animation-delay:.3s">Cita rasa renyah dan lezat dari camilan goreng pilihan,<br>dibuat untuk memuaskan setiap keinginan.</p>
+      <div class="hero-actions reveal-up" style="animation-delay:.45s">
+        <a href="#menu" class="btn-primary">Lihat Menu <i class="fas fa-arrow-right"></i></a>
+        <a href="#about" class="btn-ghost">Tentang Kami</a>
+      </div>
     </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat reveal-left" style="animation-delay:.5s">
+        <span class="stat-num" data-count="4">0</span>
+        <span class="stat-label">Menu Pilihan</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-left" style="animation-delay:.6s">
+        <span class="stat-num" data-count="100">0</span><span class="stat-pct">%</span>
+        <span class="stat-label">Bahan Segar</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-left" style="animation-delay:.7s">
+        <span class="stat-num" data-count="1000">0</span><span class="stat-pct">+</span>
+        <span class="stat-label">Pelanggan Puas</span>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Bakwan ✦ Tempe Goreng ✦ Pisang Goreng ✦ Pisang Coklat ✦ Crispy & Fresh ✦ Rp 1.000/pcs ✦</span>
+      <span>Bakwan ✦ Tempe Goreng ✦ Pisang Goreng ✦ Pisang Coklat ✦ Crispy & Fresh ✦ Rp 1.000/pcs ✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-img-wrap scroll-reveal">
+        <div class="about-img-frame">
+          <img src="https://i.ibb.co.com/kSkwcXS/Whats-App-Image-2024-11-20-at-19-54-21-16db0417.jpg" alt="Papa Iyal" />
+          <div class="about-img-accent"></div>
+          <div class="about-img-badge">
+            <i class="fas fa-fire"></i>
+            <span>Crispy<br>Since 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text scroll-reveal">
+        <div class="section-label">Tentang Kami</div>
+        <h2 class="section-title">The Licioys<br><em>Story</em></h2>
+        <p>Halo, saya <strong>Papa Iyal</strong>, pemilik The Licioys. Ini adalah toko kecil yang menyajikan kelezatan gorengan dan hidangan sarapan yang crispy dan menggugah selera.</p>
+        <p>Berawal dari kecintaan pada gorengan crispy yang menjadi favorit keluarga, saya bertekad menghadirkan cita rasa yang istimewa untuk semua orang.</p>
+        <p>Terima kasih telah mampir ke <strong>The Licioys</strong>. Semoga setiap gigitan membawa kebahagiaan!</p>
+        <div class="about-pills">
+          <span class="pill"><i class="fas fa-leaf"></i> Segar</span>
+          <span class="pill"><i class="fas fa-fire-flame-curved"></i> Crispy</span>
+          <span class="pill"><i class="fas fa-heart"></i> Homemade</span>
+          <span class="pill"><i class="fas fa-tag"></i> Terjangkau</span>
+        </div>
+        <a href="#menu" class="btn-primary">Lihat Menu <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu-section">
+    <div class="menu-header">
+      <div class="section-label reveal-up">Menu Kami</div>
+      <h2 class="section-title reveal-up" style="animation-delay:.1s">Gorengan <em>Payal</em></h2>
+      <p class="section-sub reveal-up" style="animation-delay:.2s">Semua gorengan dibuat fresh setiap hari dengan bahan pilihan terbaik</p>
+    </div>
+    <div class="menu-grid">
+
+      <div class="menu-card reveal-up" style="animation-delay:.1s">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/2c/9a/23/2c9a23d61c68e29a74f612ffe9d2597c.jpg" alt="Bakwan" />
+          <div class="card-badge">Best Seller</div>
+          <div class="card-overlay">
+            <button class="pesanButton card-quick-order" data-item="Bakwan">
+              <i class="fas fa-shopping-cart"></i> Quick Order
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Bakwan</h3>
+            <div class="card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          </div>
+          <p class="card-desc">Gorengan sayuran renyah dengan bumbu rahasia Papa Iyal</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 1.000</span>
+            <button class="pesanButton btn-order" data-item="Bakwan">
+              <i class="fas fa-cart-plus"></i> Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal-up" style="animation-delay:.2s">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/82/08/99/820899c778d6758765271cdcf2ad59fd.jpg" alt="Tempe" />
+          <div class="card-overlay">
+            <button class="pesanButton card-quick-order" data-item="Tempe">
+              <i class="fas fa-shopping-cart"></i> Quick Order
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Tempe Goreng</h3>
+            <div class="card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          </div>
+          <p class="card-desc">Tempe pilihan digoreng crispy hingga keemasan sempurna</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 1.000</span>
+            <button class="pesanButton btn-order" data-item="Tempe">
+              <i class="fas fa-cart-plus"></i> Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal-up" style="animation-delay:.3s">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/98/64/93/986493a964fc2b2c14f08ae502812c84.jpg" alt="Pisang Goreng" />
+          <div class="card-overlay">
+            <button class="pesanButton card-quick-order" data-item="Pisang Goreng">
+              <i class="fas fa-shopping-cart"></i> Quick Order
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Pisang Goreng</h3>
+            <div class="card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          </div>
+          <p class="card-desc">Pisang kepok manis dibalut tepung renyah, hangat & lezat</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 1.000</span>
+            <button class="pesanButton btn-order" data-item="Pisang Goreng">
+              <i class="fas fa-cart-plus"></i> Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal-up" style="animation-delay:.4s">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/29/5b/5d/295b5d11fc1ee301353bda4ffb0562a2.jpg" alt="Pisang Coklat" />
+          <div class="card-badge" style="background:#c0392b">Favorit</div>
+          <div class="card-overlay">
+            <button class="pesanButton card-quick-order" data-item="Pisang Coklat">
+              <i class="fas fa-shopping-cart"></i> Quick Order
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Pisang Coklat</h3>
+            <div class="card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+          </div>
+          <p class="card-desc">Pisang goreng dibalut coklat leleh, manis dan bikin ketagihan</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 1.000</span>
+            <button class="pesanButton btn-order" data-item="Pisang Coklat">
+              <i class="fas fa-cart-plus"></i> Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo-section">
+    <div class="promo-inner scroll-reveal">
+      <div class="promo-text">
+        <div class="section-label">Penawaran Spesial</div>
+        <h2>Pesan Sekarang,<br>Langsung <em>Crispy!</em></h2>
+        <p>Hubungi kami via WhatsApp dan dapatkan gorengan segar setiap harinya. Tersedia di Dramaga, Bogor.</p>
+        <a href="https://wa.me/6281277210361" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-inner">
+      <div class="contact-text scroll-reveal">
+        <div class="section-label">Kontak</div>
+        <h2 class="section-title">Hubungi <em>Kami</em></h2>
+        <p>Ingin memesan? Temukan kami di media sosial berikut atau langsung datang ke lokasi kami di Dramaga, Bogor.</p>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Kec. Dramaga, Kab. Bogor, Indonesia</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <a href="https://wa.me/6281277210361">+62 812-7721-0361</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-socials scroll-reveal">
+        <a href="https://wa.me/6281277210361" class="social-card wa" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+          <small>Chat langsung</small>
+        </a>
+        <a href="https://www.instagram.com/yal0000_/" class="social-card ig" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+          <small>@yal0000_</small>
+        </a>
+        <a href="https://www.tiktok.com/@siy00n_" class="social-card tt" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          <span>TikTok</span>
+          <small>@siy00n_</small>
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100076167772870" class="social-card fb" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+          <small>Firyalrah</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">The Licioys</div>
+        <p>Gorengan crispy pilihan keluarga, hadir setiap hari dengan cita rasa terbaik di Bogor.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/yal0000_/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@siy00n_"><i class="fab fa-tiktok"></i></a>
+          <a href="https://web.facebook.com/profile.php?id=100076167772870"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/6281277210361"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#menu">Produk</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-info">
+        <h4>Lokasi</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Kec. Dramaga, Kab. Bogor</p>
+        <p><i class="fas fa-phone"></i> <a href="https://wa.me/6281277210361">+62 812-7721-0361</a></p>
+        <p><i class="fas fa-clock"></i> Buka setiap hari</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 The Licioys. Designed by <a href="https://smkn1ciomas.sch.id/" target="_blank">Team 5, SMKN 1 Ciomas</a></p>
+    </div>
+  </footer>
+
+  <!-- POPUP ORDER -->
+  <div id="popupBox" class="popup-overlay">
+    <div class="popup-card">
+      <button class="popup-close" id="batalButton"><i class="fas fa-times"></i></button>
+      <div class="popup-icon"><i class="fas fa-shopping-bag"></i></div>
+      <h3>Mau pesan <span id="popupItem">gorengan</span>?</h3>
+      <p>Silakan hubungi kami langsung untuk memesan. Kami siap melayani!</p>
+      <div class="popup-contact">
+        <a href="https://wa.me/6281277210361" target="_blank" class="popup-wa">
+          <i class="fab fa-whatsapp"></i> +62 812-7721-0361
+        </a>
+        <small>Dramaga, Bogor</small>
+      </div>
+      <button id="batalButton2" class="btn-ghost popup-btn">Tutup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
